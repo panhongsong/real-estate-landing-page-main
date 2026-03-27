@@ -48,9 +48,9 @@ export default function News({}: NewsProps) {
   ];
 
   return (
-    <div className="w-full h-auto px-4 sm:px-6 md:px-10 py-10 max-w-full overflow-hidden"
+    <div className="w-full h-auto px-4 sm:px-[34px]   mx-auto"
     >
-      <h1 className="font-semibold text-xl md:text-2xl lg:text-2xl xl:text-3xl text-center mb-8">
+      <h1 className="font-medium text-2xl md:text-5xl lg:text-6xl text-[#2A3B8F] mb-8">
           News
       </h1>
 

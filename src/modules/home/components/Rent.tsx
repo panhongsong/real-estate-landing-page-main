@@ -11,8 +11,8 @@ export default function Rent({}: RentProps) {
       className="w-full min-h-screen bg-[#F4F7FC] px-4 md:px-16 2xl:px-48 py-24 flex flex-col items-center gap-y-16 "
     >
       <div className="w-full flex flex-col items-center">
-        <h1 className="font-medium text-3xl md:text-4xl xl:text-5xl text-center mb-10">
-          Our Popular Property
+        <h1 className="font-medium text-2xl md:text-5xl lg:text-6xl text-[#2A3B8F] mb-10">
+          Why Choose Us
         </h1>
         <p className="text-[12px] md:text-[14px] xl:text-lg text-center lg:w-[760px] text-neutral-600">
           Look For An Agency With A Proven Track Record Of Success In Buying,

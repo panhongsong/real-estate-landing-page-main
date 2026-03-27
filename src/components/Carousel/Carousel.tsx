@@ -80,7 +80,7 @@ const Carousel: React.FC<CarouselProps> = ({
       <div className="flex justify-end gap-2 mb-2">
         <button
           onClick={goToPrev}
-          className="bg-white/80 hover:bg-white rounded-full p-2 shadow-md z-10 disabled:opacity-50"
+          className="w-10 h-10 bg-white/80 hover:bg-white rounded-full p-2 shadow-md z-10 disabled:opacity-50"
           aria-label="Previous slide"
           disabled={currentIndex <= 0}
         >
@@ -88,7 +88,7 @@ const Carousel: React.FC<CarouselProps> = ({
         </button>
         <button
           onClick={goToNext}
-          className="bg-white/80 hover:bg-white rounded-full p-2 shadow-md z-10 disabled:opacity-50"
+          className= "w-10 h-10 bg-white/80 hover:bg-white rounded-full p-2 shadow-md z-10 disabled:opacity-50"
           aria-label="Next slide"
           disabled={currentIndex >= Math.max(0, items.length - visibleItems)}
         >
@@ -97,9 +97,9 @@ const Carousel: React.FC<CarouselProps> = ({
       </div>
       
       {/* 轮播项目容器 */}
-      <div className="relative w-full h-full overflow-hidden">
+      <div className="relative w-full overflow-hidden">
         <div 
-          className="flex transition-transform duration-300 ease-in-out h-full" 
+          className="flex transition-transform duration-300 ease-in-out" 
           style={{ 
             transform: `translateX(-${actualOffset}px)`,
             maxWidth: '100%'
@@ -111,7 +111,7 @@ const Carousel: React.FC<CarouselProps> = ({
               className="flex-shrink-0 mx-1 transition-all duration-300 hover:scale-[1.02] h-full"
               style={{ width: `${itemWidth}px`, height: `${itemHeight}px`, marginRight: `${gap}px`  }}
             >
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden w-full h-full flex flex-col">
+              <div className=" rounded-xl shadow-lg overflow-hidden w-full h-full flex flex-col">
                 <div className="w-full h-[70%]">
                   <img 
                     src={item.imageUrl} 
@@ -119,9 +119,9 @@ const Carousel: React.FC<CarouselProps> = ({
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="p-4 flex flex-col h-[30%]">
+                <div className="p-4 flex flex-col justify-end h-[30%]">
                   <h3 className="font-bold text-lg truncate">{item.title}</h3>
-                  <p className="text-gray-500 text-sm mt-1 truncate">{item.description}</p>
+                  <p className="text-gray-500 text-sm mt-1 truncate font-normal">{item.description}</p>
                 </div>
               </div>
             </div>

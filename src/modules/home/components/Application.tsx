@@ -1,8 +1,9 @@
 'use client';
 
 import { MENU_ITEMS_HEADLINE } from "@/common/constant/menu";
-import { Carousel, Button } from "antd";
+import { Carousel } from "antd";
 import "@/styles/carousel-custom.css";
+import ThemeButton from "@/components/ThemeButton/ThemeButton";
 
 interface ApplicationProps {}
 
@@ -50,29 +51,24 @@ export default function Application({}: ApplicationProps) {
   ];
 
   return (
-    <div className="w-full h-auto px-4 sm:px-6 md:px-10 py-10 max-w-full overflow-hidden"
+    <div className="w-full h-auto px-4 sm:px-6 md:px-10  max-w-full overflow-hidden"
     >
-      <h1 className="font-semibold text-xl md:text-2xl lg:text-2xl xl:text-3xl text-center mb-8">
+      <h1 className="font-medium text-2xl md:text-5xl lg:text-6xl text-[#2A3B8F] mb-8">
           JINGCHENG products
       </h1>
 
-      <div className="h-[608px] rounded-2xl flex flex-col md:flex-row gap-6">
-        <div className="w-full md:w-[300px] h-[250px] md:h-full flex flex-col gap-y-4 md:gap-y-8 justify-center flex-shrink-0">
-          <p className="text-[11px] md:text-base w-full">
+      <div className="  rounded-2xl flex flex-col-reverse md:flex-row gap-6 ">
+        <div className="w-full h-full md:w-[300px] md:min-h-[500px] md:h-full flex flex-col gap-y-4 md:gap-y-8 justify-center flex-shrink-0 p-4 md:p-0">
+          <p className="text-[11px] md:text-base w-full font-normal">
             Jiashan Jingcheng Machinery Co., Ltd. is a professional casting copper alloy blank company, established in December 2007, covers an area of 10,000 square meters, registered capital of 30 million yuan. Our subsidiary, Tocree Machinery
           </p>
-          <Button
-            aria-label="Get-Started"
-            className="h-auto px-6 py-2 border rounded-3xl flex items-center gap-x-2 w-fit" 
-          >
-            <span className="text-base ">Learn more</span>
-            <span className="inline-block">
-              <img src="/icons/arrow-right.svg" alt="arrow-right" />
-            </span>
-          </Button>
+          <ThemeButton
+            theme="light"
+            text="Learn more"
+          />
         </div>
         <div className="flex-1 flex-shrink min-w-0">
-          <div className="w-full h-full overflow-hidden">
+          <div className="w-full h-auto md:h-full overflow-hidden">
             <Carousel 
               dots={{ className: 'custom-dot' }} 
               arrows 
@@ -90,8 +86,8 @@ export default function Application({}: ApplicationProps) {
                       />
                     </div>
                     <div className="p-4 flex flex-col h-[30%]">
-                      <h3 className="font-bold text-lg truncate">{item.title}</h3>
-                      <p className="text-gray-500 text-sm mt-1 truncate">{item.description}</p>
+                      <h3 className="font-medium text-lg truncate">{item.title}</h3>
+                      <p className="text-gray-500 text-sm mt-1 truncate font-normal">{item.description}</p>
                     </div>
                   </div>
                 </div>

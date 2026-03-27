@@ -6,7 +6,7 @@ export default function About({}: AboutProps) {
   return (
     <section
       id="about"
-      className="w-full bg-[#0D0C1E] text-white px-8 lg:px-20 2xl:px-48 py-28 "
+      className="w-full bg-[#0D0C1E] text-white px-8 lg:px-20 2xl:px-48  "
     >
       <div className="flex flex-col lg:flex-row justify-between gap-10">
         {MENU_ABOUT.map((item, index) => (
