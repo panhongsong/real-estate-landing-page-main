@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Real Estate - Home",
   description: "Helping You Get More For Your Real Estate",
   alternates: {
-    canonical: `${process.env.DOMAIN || 'http://localhost:3000'}/home`,
+    canonical: `${process.env.DOMAIN}/home`,
   },
 };
 
