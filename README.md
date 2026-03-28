@@ -1,60 +1,4 @@
-# Real Estate - Landing Page
 
-<div align="center" width="100%">
-   <img src="/public/realestate-page.png" alt="Real Estate">
-</div>
-
-## Introduction
-
-Real Estate is a comprehensive platform dedicated to facilitating real estate transactions for both residential and commercial clients. From luxurious homes to prime commercial spaces, we cater to a diverse range of property needs, serving individuals, businesses, and investors alike.
-
-Click [_here_](https://realestate-landingpage.vercel.app/) for result.
-
-## Features
-
-- **Modern Stack**: Built with Next.js, a powerful framework, TailwindCSS and Ant Design for responsive and elegant styling.
-- **Responsive Design**: Ensure a seamless experience across various devices and screen sizes.
-- **Huge selections of Property**: Discover your dream property with our extensive network of real estate partners spanning across the globe.
-
-## ⚙️ Tech Stack
-
-- Next Js
-- Tailwind CSS
-- Ant Design
-- Redux Toolkit
-
-## Getting Started
-
-Before you begin, make sure you have Node.js and npm (Node Package Manager) installed on your system. Familiarity with Netx.js, Tailwind CSS, Ant Design, and Redux Toolkit will be beneficial for customization.
-
-## Installation
-
-1. Clone this repository to your local machine using:
-
-   ```bash
-   git clone https://github.com/abdurrozaqf/real-estate-landing-page.git
-   ```
-
-2. Navigate to the project directory:
-
-   ```bash
-   cd real-estate-landing-page
-   ```
-
-3. Install the dependencies:
-
-   ```bash
-   npm install
-   ```
-
-## Usage
-
-1. Configure your database settings in the .env file.
-2. Start the development server:
-   ```bash
-   npm run dev
-   ```
-3. Access the application in your browser at http://localhost:3000.
 
 ## Deployment to GitHub Pages
 
@@ -124,3 +68,58 @@ Before you begin, make sure you have Node.js and npm (Node Package Manager) inst
 4. 您的网站将在 `https://<your-username>.github.io/<repository-name>` 上可用。
 
 注意：如果您希望将站点部署在子路径下，请在 next.config.js 中设置 `assetPrefix` 和 `basePath`。
+
+## 部署到 Gitee Pages
+
+如果 GitHub 访问受限，您可以使用 Gitee Pages 来部署您的项目。Gitee 是国内的一个代码托管平台，提供类似 GitHub 的功能，并且支持 Pages 服务。
+
+### 部署步骤：
+
+1. 在 Gitee 上创建一个新仓库并推送您的代码：
+   - 访问 [Gitee 官网](https://gitee.com/)
+   - 登录后创建一个新的仓库
+   - 将本地代码推送到 Gitee 仓库
+
+2. 构建并导出静态版本：
+   ```bash
+   npm run deploy
+   ```
+   
+3. 这将在 `out` 目录中生成静态文件。
+
+### 如何在 Gitee 上启用 Pages 服务：
+
+如果在仓库页面找不到 "Gitee Pages" 选项，可能是因为：
+
+1. 您的仓库类型是私有的，需要改为公开仓库
+2. Gitee 可能对 Pages 服务进行了界面调整，目前可能叫 "静态网页" 或 "Web 服务"
+
+请按以下步骤操作：
+
+#### 方法一：
+1. 在 Gitee 仓库页面，点击 "服务" 菜单（通常在左侧导航栏）
+2. 查找 "静态网页"、"Pages" 或 "Web 服务" 相关选项
+3. 如果没有在侧边栏显示，可以尝试在顶部搜索框搜索 "Pages"
+
+#### 方法二：
+1. 进入您的 Gitee 仓库
+2. 点击 "管理" 或 "仓库设置"
+3. 在设置页面中查找 "静态网页服务" 或 "Gitee Pages" 选项
+4. 启用服务并选择您用于部署的分支（如 main 或 gh-pages）
+5. 选择部署目录（通常选择根目录 "/"）
+6. 点击保存或部署按钮
+
+#### 方法三（如果以上方法都找不到）：
+如果您确实无法找到 Gitee Pages 服务，可以考虑以下替代方案：
+
+1. 使用第三方静态网站托管服务：
+   - Vercel（支持直接从 Gitee 仓库部署）
+   - Netlify（可以通过拖拽上传部署）
+   - Surge
+   - Firebase Hosting
+
+2. 手动部署：
+   - 构建项目：`npm run deploy`
+   - 将 `out` 目录中的文件上传到您自己的服务器或云存储服务
+
+注意：Gitee Pages 提供的服务在国内访问速度更快，且不受网络限制影响。
