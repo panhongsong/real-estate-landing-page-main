@@ -1,6 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import { LeftOutlined, RightOutlined } from '@ant-design/icons';
+import Image from 'next/image';
 
 interface CarouselItem {
   id: number;
@@ -113,10 +114,12 @@ const Carousel: React.FC<CarouselProps> = ({
             >
               <div className=" rounded-xl shadow-lg overflow-hidden w-full h-full flex flex-col">
                 <div className="w-full h-[70%]">
-                  <img 
+                  <Image 
                     src={item.imageUrl} 
                     alt={item.title} 
                     className="w-full h-full object-cover"
+                    width={itemWidth}
+                    height={itemHeight * 0.7} // 70%的高度
                   />
                 </div>
                 <div className="p-4 flex flex-col justify-end h-[30%]">

@@ -15,9 +15,12 @@ export default function AboutUs({ data }: AboutUsProps) {
       </h1>
       <div className="grid grid-cols-1 gap-y-2 lg:gap-y-6 text-[14px] xl:text-base text-neutral-300 capitalize">
         {data.map((item, index) => (
-          <Link key={index} href={item.href}>
-            {item.title}
-          </Link>
+          item.href && item.href.trim() !== '' ?
+            <Link key={index} href={item.href}>
+              {item.title}
+            </Link> 
+          : 
+            <span key={index}>{item.title}</span>
         ))}
       </div>
     </div>

@@ -1,11 +1,12 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import ThemeButton from '@/components/ThemeButton/ThemeButton';
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-[#0B1033] text-white pt-16 pb-8 relative overflow-hidden font-sans">
+    <footer className="w-full bg-[#0B1033] md:px-[170px] text-white pt-16 pb-8 relative overflow-hidden font-sans">
       {/* 齿轮SVG背景装饰 */}
       <svg
         className="absolute right-0 bottom-0 z-0 pointer-events-none hidden md:block"
@@ -29,12 +30,12 @@ const Footer = () => {
           fill="none"
         />
       </svg>
-      <div className="relative z-10 max-w-[1320px] mx-auto px-4 flex flex-col md:flex-row gap-12">
+      <div className="relative z-10 mx-auto px-4 flex flex-col md:flex-row gap-12">
         {/* 左侧内容 */}
         <div className="flex-1 min-w-[320px] flex flex-col justify-between">
           {/* LOGO */}
-          <div className="flex items-center mb-8">
-            <img src="/logo-dark.png" alt="JCJX LOGO" className="h-12 w-auto mr-4" />
+          <div className="flex flex-col items-start mb-8 gap-3">
+            <Image src="/logo-dark.svg" alt="JCJX LOGO" width={48} height={48} className="h-12 w-auto mr-4" />
             <div>
               <div className="text-xl font-bold tracking-wider leading-tight">嘉善精诚机械股份有限公司</div>
               <div className="text-xs text-[#B6C2D9] mt-1">Copper alloy casting</div>
@@ -44,7 +45,7 @@ const Footer = () => {
           <div className="mb-8">
             <div className="text-3xl md:text-4xl font-medium mb-4" style={{ fontFamily: 'inherit' }}>让我们联系吧</div>
             <div className="text-[#B6C2D9] text-base mb-6 max-w-lg">
-              Subscribe to the Easelink Newsletter for regular updates about the industrie's leading technology.
+              Subscribe to the Easelink Newsletter for regular updates about the industry&apos;s leading technology.
             </div>
             <form className="flex flex-col gap-4">
               <input
@@ -60,8 +61,8 @@ const Footer = () => {
           </div>
           {/* 社交与语言 */}
           <div className="flex items-center gap-6 mt-8">
-            <img src="/icons/wechat.svg" alt="WeChat" className="h-8 w-8" />
-            <img src="/icons/xiaohongshu.svg" alt="小红书" className="h-8 w-8" />
+            <Image src="/icons/wechat.svg" alt="WeChat" width={32} height={32} className="h-8 w-8" />
+            <Image src="/icons/xiaohongshu.svg" alt="小红书" width={32} height={32} className="h-8 w-8" />
             <div className="flex items-center gap-2 ml-8 text-[#B6C2D9] text-sm">
               <span className="text-white">EN</span>
               <span>CN</span>
@@ -73,20 +74,20 @@ const Footer = () => {
           {/* 菜单导航 */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-x-12 gap-y-6 mb-8">
             <div>
-              <div className="text-white text-lg mb-3">Home</div>
-              <div className="text-[#B6C2D9] text-base">Technology</div>
+              <div className="text-white text-lg mb-3 hover:text-[#2A3B8F] transition-colors duration-300 cursor-pointer">Home</div>
+              <div className="text-[#B6C2D9] text-base hover:text-white transition-colors duration-300 cursor-pointer">Technology</div>
             </div>
             <div>
-              <div className="text-white text-lg mb-3">Company</div>
-              <div className="text-[#B6C2D9] text-base">Q&A</div>
+              <div className="text-white text-lg mb-3 hover:text-[#2A3B8F] transition-colors duration-300 cursor-pointer">Company</div>
+              <div className="text-[#B6C2D9] text-base hover:text-white transition-colors duration-300 cursor-pointer">Q&A</div>
             </div>
             <div>
-              <div className="text-white text-lg mb-3">Products</div>
-              <div className="text-[#B6C2D9] text-base">Applications</div>
+              <div className="text-white text-lg mb-3 hover:text-[#2A3B8F] transition-colors duration-300 cursor-pointer">Products</div>
+              <div className="text-[#B6C2D9] text-base hover:text-white transition-colors duration-300 cursor-pointer">Applications</div>
             </div>
             <div>
-              <div className="text-white text-lg mb-3">Contact</div>
-              <div className="text-[#B6C2D9] text-base">News</div>
+              <div className="text-white text-lg mb-3 hover:text-[#2A3B8F] transition-colors duration-300 cursor-pointer">Contact</div>
+              <div className="text-[#B6C2D9] text-base hover:text-white transition-colors duration-300 cursor-pointer">News</div>
             </div>
           </div>
           {/* 联系方式 */}
@@ -102,10 +103,8 @@ const Footer = () => {
             </div>
           </div>
           {/* 版权信息 */}
-          <div className="flex flex-col md:flex-row justify-between items-center text-[#B6C2D9] text-sm gap-2 mt-8">
-            <div>© {new Date().getFullYear()} Jingcheng Machinery</div>
-            <div>浙备案号</div>
-            <div>开发&设计：朗动设计</div>
+          <div className="text-[#B6C2D9] text-sm">
+            <p>&copy; 2024 嘉善精诚机械股份有限公司. All rights reserved.</p>
           </div>
         </div>
       </div>

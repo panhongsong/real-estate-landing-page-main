@@ -4,6 +4,7 @@ import { MENU_ITEMS_HEADLINE } from "@/common/constant/menu";
 import { Carousel } from "antd";
 import "@/styles/carousel-custom.css";
 import ThemeButton from "@/components/ThemeButton/ThemeButton";
+import Image from 'next/image';
 
 interface ApplicationProps {}
 
@@ -79,10 +80,12 @@ export default function Application({}: ApplicationProps) {
                 <div key={item.id} className="h-[508px]">
                   <div className=" rounded-xl  overflow-hidden w-full h-full flex flex-col">
                     <div className="w-full h-[70%]">
-                      <img 
+                      <Image 
                         src={item.imageUrl} 
                         alt={item.title} 
                         className="w-full h-full object-cover"
+                        width={500}
+                        height={356} // 70% of 508px
                       />
                     </div>
                     <div className="p-4 flex flex-col h-[30%]">

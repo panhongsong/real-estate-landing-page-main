@@ -13,9 +13,12 @@ export default function ContactInfo({ data }: ContactInfoProps) {
       <h1 className="font-medium text-lg mb-4 lg:mb-8">Contact Info</h1>
       <div className="flex flex-col gap-y-2 lg:gap-y-6 text-neutral-300">
         {data.map((item, index) => (
-          <Link key={index} href={item.href} target="_blank">
-            {item.title}
-          </Link>
+          item.href && item.href.trim() !== '' ?
+            <Link key={index} href={item.href} target="_blank">
+              {item.title}
+            </Link>
+          :
+            <span key={index}>{item.title}</span>
         ))}
       </div>
     </div>

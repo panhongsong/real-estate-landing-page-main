@@ -80,6 +80,7 @@ export const MENU_ITEMS: MenuItems[] = [
       },
       {
         title: "Yield strength",
+        href: "about",
       }
     ]
   },
@@ -104,6 +105,7 @@ export const MENU_ITEMS: MenuItems[] = [
       },
       {
         title: "Yield strength",
+        href: "about",
       }
     ]
   },
@@ -128,6 +130,7 @@ export const MENU_ITEMS: MenuItems[] = [
       },
       {
         title: "Yield strength",
+        href: "about",
       }
     ]
 
@@ -153,6 +156,7 @@ export const MENU_ITEMS: MenuItems[] = [
       },
       {
         title: "Yield strength",
+        href: "about",
       }
      ]
   },
@@ -177,6 +181,7 @@ export const MENU_ITEMS: MenuItems[] = [
       },
       {
         title: "Yield strength",
+        href: "about",
       }
     ]
   }
@@ -233,11 +238,9 @@ export const MENU_QUICK: MenuFooter[] = [
 export const MENU_ABOUT_US: MenuFooter[] = [
   {
     title: "payment plans",
-    href: "",
   },
   {
     title: "make saving more",
-    href: "",
   },
   {
     title: "tax calculator",
@@ -245,21 +248,17 @@ export const MENU_ABOUT_US: MenuFooter[] = [
   },
   {
     title: "talk to us",
-    href: "",
   },
 ];
 
 export const MENU_CONTACT_INFO: MenuFooter[] = [
   {
     title: "123 Main Street, Apt 4B Los Angeles, CA 90001, USA ",
-    href: "",
   },
   {
     title: "+088 (123) 456-78-91",
-    href: "",
   },
   {
     title: "company@gmail.com",
-    href: "",
   },
 ];

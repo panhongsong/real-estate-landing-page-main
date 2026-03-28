@@ -53,9 +53,9 @@ export default function MenuItem({ items }: MenuItemProps) {
   return (
     <div className="w-full flex justify-between flex-col lg:flex-row gap-y-6 lg:gap-x-8 2xl:gap-x-16 lg:items-center">
       <div className="flex justify-between items-center">
-        <Link href="home" aria-label="home">
+        <Link href="/" aria-label="home">
           <Image
-            src="/logo-1.png"
+            src="/logo-light.png"
             alt="logo"
             width="0"
             height="0"
@@ -63,6 +63,7 @@ export default function MenuItem({ items }: MenuItemProps) {
             className="w-[120px] h-auto"
           />
         </Link>
+
         <button
           type="button"
           onClick={handleToggle}
@@ -74,7 +75,7 @@ export default function MenuItem({ items }: MenuItemProps) {
       </div>
       {toggleState && (
         <>
-          <div className="flex lg:hidden flex-col gap-y-6 tracking-wide ml-2">
+          <div className="flex lg:hidden flex-col gap-y-5 tracking-wide ml-2">
             {items.map((item) => (
               item.subItems && item.subItems.length > 0 ? (
                 <Dropdown

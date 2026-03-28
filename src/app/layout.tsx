@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NODE_ENV === "development"
       ? "http://localhost:3000"
-      : process.env.DOMAIN || ""
+      : process.env.DOMAIN || "http://localhost:3000"
   ),
   title: {
     default: "Real Estate",
@@ -29,39 +29,48 @@ export const metadata: Metadata = {
   creator: METADATA.creator,
   openGraph: {
     type: "website",
+    locale: "id-ID",
+    title: "Real Estate",
+    siteName: "Real Estate",
     url: METADATA.openGraph.url,
-    title: METADATA.openGraph.title,
-    locale: METADATA.openGraph.locale,
-    siteName: METADATA.openGraph.siteName,
-    description: METADATA.openGraph.description,
-    images: [
-      {
-        url: METADATA.openGraph.images.url,
-        width: 1200,
-        height: 630,
-        alt: METADATA.openGraph.images.alt,
-      },
-    ],
+    description:
+      METADATA.description,
+    images: [{
+      url: METADATA.openGraph.images.url,
+      width: METADATA.openGraph.images.width,
+      height: METADATA.openGraph.images.height,
+      alt: METADATA.openGraph.images.alt,
+    }],
   },
-  twitter: {
-    card: "summary_large_image",
-    title: METADATA.title,
-    description: METADATA.description,
-    images: [`${METADATA.siteUrl}/og.png`],
-    creator: "@abdurrozaqf_",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
-  manifest: METADATA.manifest,
+  // verification: {
+  //   google: "google",
+  //   yandex: "yandex",
+  //   yahoo: "yahoo",
+  //   other: {
+  //     me: ["benzhao", "linkcard"],
+  //   },
+  // },
 };
 
-interface RootLayoutProps {
+export default function RootLayout({
+  children,
+}: {
   children: React.ReactNode;
-}
-
-export default function RootLayout({ children }: RootLayoutProps) {
+}) {
   return (
     <html lang="en">
-      <head />
-      <body className={`${ubuntu.className}`}>
+      <body className={ubuntu.className}>
         <Layout>{children}</Layout>
       </body>
     </html>

@@ -1,5 +1,6 @@
 import { MENU_ITEMS_HEADLINE } from "@/common/constant/menu";
 import ThemeButton from "@/components/ThemeButton/ThemeButton";
+import Image from 'next/image';
 
 interface QualityProps {}
 
@@ -13,7 +14,13 @@ export default function Quality({}: QualityProps) {
             <p>assurance</p> 
       </h1>
       <div className="md:h-[550px] rounded-2xl relative md:flex justify-between items-center gap-6 py-8">
-        <img src="/images/image-3.png" alt="" className="w-full h-full object-cover md:w-7/12"/>
+        <Image 
+          src="/images/image-3.png" 
+          alt="Product quality assurance" 
+          className="w-full h-full object-cover md:w-7/12"
+          width={768}
+          height={550}
+        />
         <div className="md:w-[550px] h-full flex flex-col gap-y-4 md:gap-y-8 justify-center p-10">
           <p className="font-medium">
             High-quality products rely on highly precise instruments to ensure their quality.
